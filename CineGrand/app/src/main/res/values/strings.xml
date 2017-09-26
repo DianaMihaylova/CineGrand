@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CineGrand</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="register_now">REGISTER NOW</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="confirm_password">Confirm password:</string>
+    <string name="welcome_to">WELCOME TO</string>
+    <string name="enter_e_mail">Enter e-mail:</string>
+    <string name="enter_password">Enter password:</string>
+    <string name="enter_e_mail_here">enter e-mail here</string>
+    <string name="enter_password_here">enter password here</string>
+    <string name="send">SEND</string>
+</resources>
