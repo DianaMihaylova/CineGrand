@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ittalents.cinegrand.activities.ListViewMoviesActivity">
+
+
+    <Button
+        android:id="@+id/button_choose_cinema"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose cinema"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <Button
+        android:id="@+id/button_movies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/movies"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp"
+        android:layout_below="@+id/button_choose_cinema"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/button_contacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contacts"
+        android:layout_marginRight="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_below="@+id/button_choose_cinema"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_movies"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

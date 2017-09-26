@@ -10,4 +10,24 @@
     <string name="enter_e_mail_here">enter e-mail here</string>
     <string name="enter_password_here">enter password here</string>
     <string name="send">SEND</string>
+    <string name="movies">Movies</string>
+    <string name="contacts">Contacts</string>
+
+    <string-array name="movies_names">
+        <item>IT</item>
+        <item>XII “А“</item>
+        <item>Despicable Me 3</item>
+        <item>Hitmans Bodyguard</item>
+        <item>The Nut Job 2: Nutty by Nature</item>
+        <item>Logan Lucky</item>
+    </string-array>
+
+    <string-array name="genre_of_movies">
+        <item>Drama | Horror</item>
+        <item>Comedy | Drama</item>
+        <item>Action | Comedy | Animation | Adventure</item>
+        <item>Action | Comedy</item>
+        <item>Comedy | Animation | Adventure</item>
+        <item>Comedy | Drama | Crime</item>
+    </string-array>
 </resources>

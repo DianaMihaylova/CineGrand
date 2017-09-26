@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="105dp">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button_movies"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/despicable_me_3"/>
+
+    <TextView
+        android:id="@+id/name_movie"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:text="Movie Info"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp" />" />
+
+    <TextView
+        android:id="@+id/genre_info"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:text="Movie Info"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/img"
+        android:layout_toEndOf="@+id/img"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@id/name_movie"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="3dp"
+        android:id="@+id/view" />
+
+</RelativeLayout>

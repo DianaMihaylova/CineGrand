@@ -48,7 +48,7 @@ public class SignInActivity extends Activity {
                 User u = new User(userNameValue, passValue);
                 if (u != null && myDb.checkEmailPass(userNameValue, passValue)) {
                     Toast.makeText(getBaseContext(), "Sign in success! Welcome " + u.getEmail(), Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(getBaseContext(), CinemasActivity.class);
+                    Intent i = new Intent(getBaseContext(), ListViewMoviesActivity.class);
                     startActivity(i);
                 } else {
                     AlertDialog.Builder alertBuilder = new AlertDialog.Builder(SignInActivity.this);
