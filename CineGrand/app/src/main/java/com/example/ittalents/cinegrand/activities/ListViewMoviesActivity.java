@@ -42,6 +42,5 @@ public class ListViewMoviesActivity extends Activity {
         manager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(adapter);
-
     }
 }

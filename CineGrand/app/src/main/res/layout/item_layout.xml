@@ -15,25 +15,29 @@
         android:id="@+id/name_movie"
         android:layout_width="130dp"
         android:layout_height="100dp"
-        android:text="Movie Info"
-        android:gravity="center"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="16dp"
-        android:layout_marginEnd="16dp" />" />
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/img"
+        android:layout_toRightOf="@+id/img"
+        android:gravity="center"
+        android:text="Movie Info"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/holo_orange_light" />
 
     <TextView
         android:id="@+id/genre_info"
         android:layout_width="130dp"
         android:layout_height="100dp"
-        android:text="Movie Info"
-        android:gravity="center"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/img"
-        android:layout_toEndOf="@+id/img"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp" />
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:text="Movie Info"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/holo_orange_light" />" />
     
     <View
         android:layout_width="match_parent"
