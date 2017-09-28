@@ -27,17 +27,16 @@ public class RegisterActivity extends Activity {
 
         imageView = (ImageView) findViewById(R.id.imageView);
         imageView.setImageResource(R.drawable.cine_grand_logo_small);
+        userName = (EditText) findViewById(R.id.entered_mail);
+        pass = (EditText) findViewById(R.id.entered_pass);
+        confirmPass = (EditText) findViewById(R.id.confirmed_pass);
+        registerBtn = (Button) findViewById(R.id.button_register);
         myDb = DatabaseManager.getDBManager(this);
         myDb.createDatabase();
         setRegisterBtn();
     }
 
     private void setRegisterBtn() {
-        userName = (EditText) findViewById(R.id.entered_mail);
-        pass = (EditText) findViewById(R.id.entered_pass);
-        confirmPass = (EditText) findViewById(R.id.confirmed_pass);
-        registerBtn = (Button) findViewById(R.id.button_register);
-
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,8 +54,9 @@ public class RegisterActivity extends Activity {
                         boolean result = myDb.addUser(u);
                         if (result) {
                             Toast.makeText(RegisterActivity.this, "Registration successful! Welcome " + u.getEmail(), Toast.LENGTH_LONG).show();
-                            Intent i = new Intent(getBaseContext(), CinemasActivity.class);
+                            Intent i = new Intent(getBaseContext(), MovieDetailsActivity.class);
                             startActivity(i);
+                            finish();
                         } else {
                             Toast.makeText(getBaseContext(), "E-mail already exist!", Toast.LENGTH_LONG).show();
                         }

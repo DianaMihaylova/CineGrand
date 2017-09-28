@@ -30,16 +30,15 @@ public class SignInActivity extends Activity {
 
         imageView = (ImageView) findViewById(R.id.imageView);
         imageView.setImageResource(R.drawable.cine_grand_logo_small);
+        userName = (EditText) findViewById(R.id.entered_mail);
+        pass = (EditText) findViewById(R.id.entered_pass);
+        signInBtn = (Button) findViewById(R.id.button_sign_in);
         myDb = DatabaseManager.getDBManager(this);
         myDb.createDatabase();
         setSignInBtn();
     }
 
     private void setSignInBtn() {
-        userName = (EditText) findViewById(R.id.entered_mail);
-        pass = (EditText) findViewById(R.id.entered_pass);
-        signInBtn = (Button) findViewById(R.id.button_sign_in);
-
         signInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,6 +49,7 @@ public class SignInActivity extends Activity {
                     Toast.makeText(getBaseContext(), "Sign in success! Welcome " + u.getEmail(), Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(getBaseContext(), ListViewMoviesActivity.class);
                     startActivity(i);
+                    finish();
                 } else {
                     AlertDialog.Builder alertBuilder = new AlertDialog.Builder(SignInActivity.this);
                     alertBuilder.setMessage("Wrong e-mail or password! Try again.")

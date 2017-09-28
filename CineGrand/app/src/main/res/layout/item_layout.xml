@@ -22,7 +22,7 @@
         android:layout_toRightOf="@+id/img"
         android:gravity="center"
         android:text="Movie Info"
-        android:textAlignment="viewStart"
+        android:fontFamily="cursive"
         android:textColor="@android:color/holo_orange_light" />
 
     <TextView
@@ -35,8 +35,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:gravity="center"
-        android:text="Movie Info"
-        android:textAlignment="textEnd"
+        android:fontFamily="cursive"
+        android:text="Genre Info"
         android:textColor="@android:color/holo_orange_light" />" />
     
     <View

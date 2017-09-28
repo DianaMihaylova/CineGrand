@@ -7,13 +7,13 @@
     android:background="@android:color/black"
     tools:context="com.example.ittalents.cinegrand.activities.ListViewMoviesActivity">
 
-
     <Button
         android:id="@+id/button_choose_cinema"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Choose cinema"
-        android:textAlignment="center"
+        android:text="@string/click_to_choose_other_cinema"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:fontFamily="cursive"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -24,6 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/movies"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:fontFamily="cursive"
         android:layout_marginLeft="44dp"
         android:layout_marginStart="44dp"
         android:layout_below="@+id/button_choose_cinema"
@@ -35,6 +37,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/contacts"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:fontFamily="cursive"
         android:layout_marginRight="41dp"
         android:layout_marginEnd="41dp"
         android:layout_below="@+id/button_choose_cinema"
