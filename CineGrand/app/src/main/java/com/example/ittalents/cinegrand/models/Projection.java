@@ -2,6 +2,8 @@ package com.example.ittalents.cinegrand.models;
 
 public class Projection {
 
+    private static int num = 1;
+    private int id;
     private int ticketCount;
     private int bookedTicketCount;
     private int cinemaID;
@@ -14,6 +16,7 @@ public class Projection {
         if (movieID > 0) {
             this.movieID = movieID;
         }
+        this.id = num++;
         this.ticketCount = 50;
         this.bookedTicketCount = 0;
     }
