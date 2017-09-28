@@ -19,7 +19,10 @@
         <activity android:name=".activities.RegisterActivity" />
         <activity android:name=".activities.SignInActivity" />
         <activity android:name=".activities.MovieDetailsActivity" />
-        <activity android:name=".activities.ListViewMoviesActivity"></activity>
+        <activity android:name=".activities.ListViewMoviesActivity" />
+        <activity android:name=".activities.ReservationActivity" />
+        <activity android:name=".activities.ContactsActivity" />
+        <activity android:name=".activities.CinemasActivity"></activity>
     </application>
 
 </manifest>

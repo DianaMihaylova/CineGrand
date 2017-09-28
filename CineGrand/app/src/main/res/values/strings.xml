@@ -13,6 +13,8 @@
     <string name="movies">Movies</string>
     <string name="contacts">Contacts</string>
     <string name="click_to_choose_other_cinema">Click to choose other cinema</string>
+    <string name="reservation">Reservation</string>
+    <string name="contacts_of_the_cinema">Contacts of the cinema</string>
 
     <string-array name="movies_names">
         <item>IT</item>

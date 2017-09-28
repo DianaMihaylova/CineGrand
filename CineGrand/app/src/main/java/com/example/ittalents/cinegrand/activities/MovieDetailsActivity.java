@@ -1,7 +1,10 @@
 package com.example.ittalents.cinegrand.activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,8 +21,9 @@ public class MovieDetailsActivity extends Activity {
         addMovies();
     }
 
-    ImageView imageView;
-    TextView info, trailer;
+    private ImageView imageView;
+    private TextView info, trailer;
+    private Button reservationBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,17 +33,25 @@ public class MovieDetailsActivity extends Activity {
         imageView = (ImageView) findViewById(R.id.imageView3);
         info = (TextView) findViewById(R.id.textView2);
         trailer = (TextView) findViewById(R.id.textView);
-
+        reservationBtn = (Button) findViewById(R.id.button_reservation);
 
         imageView.setImageResource(getIntent().getIntExtra("img_id", 00));
         String intentString = getIntent().getStringExtra("name");
 
         for (Movie movie: movies) {
             if (movie.getTitle().equals(intentString)) {
-                trailer.setText(movie.getTrailer());
+                trailer.setText("Watch trailer here: " + movie.getTrailer());
                 info.setText(movie.getDescription());
             }
         }
+
+        reservationBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(), ReservationActivity.class);
+                startActivity(i);
+            }
+        });
     }
     private static void addMovies() {
         Movie m1 = new Movie("IT", "Genre:Drama | Horror\n" +
@@ -62,11 +74,11 @@ public class MovieDetailsActivity extends Activity {
                 "Language:Bulgarian\n" +
                 "Released on: 15/09/2017\n" +
                 "Rating:G\n" +
-                "Director: Магдалена Ралчева\n" +
+                "Director: Magdalena Ralcheva\n" +
                 "Actors:\n" +
-                "Радина Кърджилова, Дарин Ангелов, Мария Каварджикова, Елена Бойчева, Анелия Мангърова," +
-                " Велислава Костадинова, Калоян Минев, Деян Георгиев\n" +
-                "Country / Year: България 2017\n" +
+                "Radina Kurdjilova, Darin Angelov, Mariq Kavardjikova, Elena Boicheva, Aneliq Mangurova," +
+                " Velislava Kostadinova, Kaloqn Minev, Deqn Georgiev\n" +
+                "Country / Year: Bulgaria 2017\n" +
                 "The movie XIIa is the sequel of the super successful XIa. In XIIa the journey continues." +
                 " After two years break, Lina is back to school to teach a new class - a new class, new problems.",
                 "https://youtu.be/sB4zz9sajsw");
