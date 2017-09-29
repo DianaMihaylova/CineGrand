@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/holo_orange_light"
         android:fontFamily="cursive"
-        android:text="@string/reservation"
+        android:text="@string/program_for_this_movie"
         android:textSize="18sp"
         android:textStyle="bold" />
 

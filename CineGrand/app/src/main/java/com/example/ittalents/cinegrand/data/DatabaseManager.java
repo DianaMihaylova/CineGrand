@@ -10,6 +10,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.ittalents.cinegrand.models.Cinema;
+import com.example.ittalents.cinegrand.models.Movie;
 import com.example.ittalents.cinegrand.models.User;
 
 import java.util.ArrayList;
@@ -22,12 +23,20 @@ public class DatabaseManager extends SQLiteOpenHelper {
     private static int DATABASE_VERSION = 1;
 //    Table name
     private static final String TABLE_USERS = "Users_Table";
+    private static final String TABLE_LIKES = "Likes_Table";
 //    Users Table
     private static final String KEY_EMAIL = "Email";
     private static final String KEY_PASSWORD = "Password";
+//    LikesTable
+    private static final String LIKE_EMAIL = "Email";
+    private static final String TITLE_MOVIE_LIKE = "Title";
 
     private static final String CREATE_USERS_TABLE = "CREATE TABLE " + TABLE_USERS +
             "( " + KEY_EMAIL + " TEXT PRIMARY KEY, " + KEY_PASSWORD + " TEXT)";
+
+    private static final String CREATE_LIKES_TABLE = "CREATE TABLE " + TABLE_LIKES +
+            "( " + LIKE_EMAIL + " TEXT PRIMARY KEY, " + TITLE_MOVIE_LIKE + " TEXT)";
+
 
     private DatabaseManager(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -48,12 +57,14 @@ public class DatabaseManager extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_USERS_TABLE);
+        db.execSQL(CREATE_LIKES_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         DATABASE_VERSION++;
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_LIKES);
         onCreate(db);
     }
 
@@ -103,5 +114,34 @@ public class DatabaseManager extends SQLiteOpenHelper {
             return true;
         }
         return false;
+    }
+
+    public boolean addLike(String email, Movie movie) {
+        if (movie != null && email != null && !email.isEmpty()) {
+            SQLiteDatabase db = this.getWritableDatabase();
+            String myRawQuery = "select " + TITLE_MOVIE_LIKE + " from " + TABLE_LIKES + " where " + LIKE_EMAIL + " = \"" + email + "\";";
+            Cursor c = db.rawQuery(myRawQuery, null);
+            if (c.getCount() != 0) {
+                return false;
+            }
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(LIKE_EMAIL, email);
+            contentValues.put(TITLE_MOVIE_LIKE, movie.getTitle());
+            long result = db.insert(TABLE_USERS, null, contentValues);
+            if (result == -1) {
+                return false;
+            }
+        } else {
+            return false;
+        }
+        return true;
+    }
+
+    public void deleteLike(String email, Movie movie) {
+        if (movie != null && email != null && !email.isEmpty()) {
+            SQLiteDatabase db = this.getWritableDatabase();
+            String myRawQuery = "select " + TITLE_MOVIE_LIKE + " from " + TABLE_LIKES + " where " + LIKE_EMAIL + " = \"" + email + "\";";
+
+        }
     }
 }
