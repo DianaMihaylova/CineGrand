@@ -1,13 +1,5 @@
 package com.example.ittalents.cinegrand.models;
 
-import android.content.Context;
-
-import com.example.ittalents.cinegrand.activities.SignInActivity;
-
-import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class User {
 
     private String email;
@@ -34,12 +26,12 @@ public class User {
     }
 
     public boolean isStrongPass(String pass) {
-        boolean lenghtPass = false;
+        boolean lengthPass = false;
         boolean hasDigit = false;
         boolean hasCapitalLetter = false;
         boolean hasSmallLetter = false;
         if (!pass.matches("[;\"]") && pass != null && !pass.isEmpty() && pass.length() >= 5) {
-            lenghtPass = true;
+            lengthPass = true;
             for (int i = 0; i < pass.length(); i++) {
                 if (pass.charAt(i) >= '1' && pass.charAt(i) <= '9') {
                     hasDigit = true;
@@ -52,6 +44,6 @@ public class User {
                 }
             }
         }
-        return (lenghtPass && hasDigit && hasSmallLetter && hasCapitalLetter);
+        return (lengthPass && hasDigit && hasSmallLetter && hasCapitalLetter);
     }
 }

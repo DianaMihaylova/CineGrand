@@ -1,13 +1,14 @@
 package com.example.ittalents.cinegrand.models;
 
-public class Movie {
+import java.io.Serializable;
 
-    private static int num = 1;
-    private int id;
+public class Movie implements Serializable {
+
     private String title;
     private String infoMovie;
     private String description;
     private String trailer;
+    private String program;
     private int imgRes;
     private int numOfLikes;
     private int numOfDislikes;
@@ -16,29 +17,29 @@ public class Movie {
         if (imgRes > 0) {
             this.imgRes = imgRes;
         }
-        this.title = title;
+        if (title != null && !title.isEmpty()) {
+            this.title = title;
+        }
         if (infoMovie != null && !infoMovie.isEmpty()) {
             this.infoMovie = infoMovie;
         }
     }
 
-    public Movie(String title, String description, String trailer) {
+    public Movie(String title, String description, String trailer, String program) {
         if (title != null && !title.isEmpty()) {
             this.title = title;
         }
         if (description != null && !description.isEmpty()) {
             this.description = description;
         }
-        if (trailer != null) {
+        if (trailer != null && !trailer.isEmpty()) {
             this.trailer = trailer;
         }
-        this.id = num++;
+        if (program != null && !program.isEmpty()) {
+            this.program = program;
+        }
         this.numOfLikes = 0;
         this.numOfDislikes = 0;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public String getTitle() {
@@ -59,6 +60,10 @@ public class Movie {
 
     public String getInfoMovie() {
         return infoMovie;
+    }
+
+    public String getProgram() {
+        return program;
     }
 
     public int getNumOfLikes() {

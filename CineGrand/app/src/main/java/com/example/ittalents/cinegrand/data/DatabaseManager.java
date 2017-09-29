@@ -83,12 +83,12 @@ public class DatabaseManager extends SQLiteOpenHelper {
         return true;
     }
 
-    public Cursor getUser(String email) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        String myRawQuery = "select * from " + TABLE_USERS + " where " + KEY_EMAIL +
-                " = \"" + email + "\";";
-        return db.rawQuery(myRawQuery, null);
-    }
+//    public Cursor getUser(String email) {
+//        SQLiteDatabase db = this.getReadableDatabase();
+//        String myRawQuery = "select * from " + TABLE_USERS + " where " + KEY_EMAIL +
+//                " = \"" + email + "\";";
+//        return db.rawQuery(myRawQuery, null);
+//    }
 
     public boolean checkEmailPass(String email, String password) {
         SQLiteDatabase db = this.getReadableDatabase();

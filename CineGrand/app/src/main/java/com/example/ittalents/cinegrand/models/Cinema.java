@@ -1,27 +1,42 @@
 package com.example.ittalents.cinegrand.models;
 
-public class Cinema {
+import java.io.Serializable;
 
-    private static int num = 1;
-    private int id;
+public class Cinema implements Serializable {
+
     private String name;
-    private String contacts;
+    private String address;
+    private String tel;
     private String map;
 
-    public Cinema(String name, String contacts, String map) {
+    public Cinema(String name, String address, String tel, String map) {
         if (name != null && !name.isEmpty()) {
             this.name = name;
         }
-        if (contacts != null && !contacts.isEmpty()) {
-            this.contacts = contacts;
+        if (address != null && !address.isEmpty()) {
+            this.address = address;
+        }
+        if (tel != null && !tel.isEmpty()) {
+            this.tel = tel;
         }
         if (map != null && !map.isEmpty()) {
             this.map = map;
         }
-        this.id = num++;
     }
 
-    public int getId() {
-        return id;
+    public String getName() {
+        return name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public String getMap() {
+        return map;
     }
 }
