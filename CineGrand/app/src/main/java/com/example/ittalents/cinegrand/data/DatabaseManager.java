@@ -123,8 +123,16 @@ public class DatabaseManager extends SQLiteOpenHelper {
                     " = \"" + email + "\";";
             if (db.rawQuery(myRawQuery, null).getCount() != 0) {
                 if (checkMovie(email, movie)) {
-                    deleteLike(email, movie);
                     return false;
+                } else {
+                    ContentValues contentValues = new ContentValues();
+                    contentValues.putNull(LIKE_ID);
+                    contentValues.put(LIKE_EMAIL, email);
+                    contentValues.put(LIKE_MOVIE_TITLE, movie.getTitle());
+                    long result = db.insert(TABLE_LIKES, null, contentValues);
+                    if (result == -1) {
+                        return false;
+                    }
                 }
             }
             ContentValues contentValues = new ContentValues();

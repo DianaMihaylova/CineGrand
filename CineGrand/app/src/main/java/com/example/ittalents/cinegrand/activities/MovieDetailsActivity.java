@@ -27,7 +27,7 @@ public class MovieDetailsActivity extends Activity {
     private TextView info, trailer;
     private Button programBtn;
     private Movie movieToProgram;
-    private ImageButton imgBtn;
+    private ImageButton likeBtn;
     private DatabaseManager myDb;
 
     @Override
@@ -39,7 +39,7 @@ public class MovieDetailsActivity extends Activity {
         info = (TextView) findViewById(R.id.textView2);
         trailer = (TextView) findViewById(R.id.textView);
         programBtn = (Button) findViewById(R.id.button_program);
-        imgBtn = (ImageButton) findViewById(R.id.img_btn);
+        likeBtn = (ImageButton) findViewById(R.id.like_btn);
         myDb = DatabaseManager.getDBManager(this);
         myDb.createDatabase();
 
@@ -63,7 +63,7 @@ public class MovieDetailsActivity extends Activity {
             }
         });
 
-        imgBtn.setOnClickListener(new View.OnClickListener() {
+        likeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 User u = (User) getIntent().getSerializableExtra("user");
@@ -71,8 +71,8 @@ public class MovieDetailsActivity extends Activity {
                 if (result) {
                     Toast.makeText(MovieDetailsActivity.this, "You like this movie :)", Toast.LENGTH_LONG).show();
                     movieToProgram.setNumOfLikes(movieToProgram.getNumOfLikes() + 1);
-
                 } else {
+                    myDb.deleteLike(u.getEmail(), movieToProgram);
                     Toast.makeText(getBaseContext(), "You unlike this movie :(", Toast.LENGTH_LONG).show();
                     movieToProgram.setNumOfLikes(movieToProgram.getNumOfLikes() - 1);
                 }

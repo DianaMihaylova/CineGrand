@@ -21,7 +21,6 @@ public class CinemasActivity extends Activity {
         addCinema();
     }
 
-
     private ImageView imageView;
     private Button parkCenterButton;
     private Button ringMallButton;
@@ -36,11 +35,14 @@ public class CinemasActivity extends Activity {
         parkCenterButton = (Button)findViewById(R.id.park_center_button);
         ringMallButton = (Button)findViewById(R.id.ring_mall_button);
 
+        final User u = (User) getIntent().getSerializableExtra("user");
+
         parkCenterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), ListViewMoviesActivity.class);
                 intent.putExtra("Kino", cinemas.get(0));
+                intent.putExtra("user", u);
                 startActivity(intent);
             }
         });
@@ -50,6 +52,7 @@ public class CinemasActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), ListViewMoviesActivity.class);
                 intent.putExtra("Kino", cinemas.get(1));
+                intent.putExtra("user", u);
                 startActivity(intent);
             }
         });
@@ -64,5 +67,4 @@ public class CinemasActivity extends Activity {
                 "+359 875 300 996, +359 875 200 993", R.drawable.ring_mall_map);
         cinemas.add(ringMall);
     }
-
 }
