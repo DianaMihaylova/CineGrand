@@ -11,7 +11,7 @@
     tools:context="com.example.ittalents.cinegrand.activities.MovieDetailsActivity">
 
     <Button
-        android:id="@+id/button_reservation"
+        android:id="@+id/button_program"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/holo_orange_light"

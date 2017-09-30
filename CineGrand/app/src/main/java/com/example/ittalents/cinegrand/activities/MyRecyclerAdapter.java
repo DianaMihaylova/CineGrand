@@ -70,8 +70,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
             Movie movie = this.movies.get(position);
             User u = (User) ((ListViewMoviesActivity) context).getIntent().getSerializableExtra("user");
             Intent i = new Intent(this.context, MovieDetailsActivity.class);
-            i.putExtra("img_id", movie.getImgRes());
-            i.putExtra("name", movie.getTitle());
+            i.putExtra("movie", movie);
             i.putExtra("user", u);
             this.context.startActivity(i);
         }

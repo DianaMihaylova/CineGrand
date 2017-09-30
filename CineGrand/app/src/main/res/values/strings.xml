@@ -18,25 +18,4 @@
     <string name="program">Program</string>
     <string name="program_for_this_movie">Program for this movie</string>
 
-    <string-array name="movies_names">
-        <item>IT</item>
-        <item>XII А</item>
-        <item>Despicable Me 3</item>
-        <item>Hitmans Bodyguard</item>
-        <item>The Nut Job 2</item>
-        <item>Logan Lucky</item>
-    </string-array>
-
-    <string-array name="genre_of_movies">
-        <item>Drama | Horror</item>
-        <item>Comedy | Drama</item>
-        <item>Action | Comedy | Animation | Adventure</item>
-        <item>Action | Comedy</item>
-        <item>Comedy | Animation | Adventure</item>
-        <item>Comedy | Drama | Crime</item>
-    </string-array>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 </resources>

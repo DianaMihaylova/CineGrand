@@ -24,9 +24,12 @@ public class Movie implements Serializable {
         }
     }
 
-    public Movie(String title, String description, String trailer, String program) {
+    public Movie(String title, String infoMovie, String description, String trailer, String program, int imgRes) {
         if (title != null && !title.isEmpty()) {
             this.title = title;
+        }
+        if (infoMovie != null && !infoMovie.isEmpty()) {
+            this.infoMovie = infoMovie;
         }
         if (description != null && !description.isEmpty()) {
             this.description = description;
@@ -36,6 +39,9 @@ public class Movie implements Serializable {
         }
         if (program != null && !program.isEmpty()) {
             this.program = program;
+        }
+        if (imgRes > 0) {
+            this.imgRes = imgRes;
         }
         this.numOfLikes = 0;
     }
