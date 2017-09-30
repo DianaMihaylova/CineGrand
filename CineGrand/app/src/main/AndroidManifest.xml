@@ -22,7 +22,7 @@
         <activity android:name=".activities.ListViewMoviesActivity" />
         <activity android:name=".activities.ReservationActivity" />
         <activity android:name=".activities.ContactsActivity" />
-        <activity android:name=".activities.CinemasActivity"></activity>
+        <activity android:name=".activities.CinemasActivity" />
     </application>
 
 </manifest>

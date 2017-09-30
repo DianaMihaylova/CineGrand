@@ -7,4 +7,46 @@
     android:orientation="vertical"
     tools:context="com.example.ittalents.cinegrand.activities.CinemasActivity">
 
+    <ImageView
+        android:id="@+id/cinema_logo_large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/cine_grand_logo_large"
+        />
+
+    <TextView
+        android:id="@+id/cinemas_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="Cinemas"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="56dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/park_center_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cine Grand Park Center"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:fontFamily="cursive"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/ring_mall_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cine Grand Ring Mall"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:fontFamily="cursive"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        />
+
+
+
 </LinearLayout>
