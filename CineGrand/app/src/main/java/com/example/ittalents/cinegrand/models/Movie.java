@@ -11,7 +11,6 @@ public class Movie implements Serializable {
     private String program;
     private int imgRes;
     private int numOfLikes;
-    private int numOfDislikes;
 
     public Movie(int imgRes, String title, String infoMovie) {
         if (imgRes > 0) {
@@ -39,7 +38,6 @@ public class Movie implements Serializable {
             this.program = program;
         }
         this.numOfLikes = 0;
-        this.numOfDislikes = 0;
     }
 
     public String getTitle() {
@@ -72,13 +70,5 @@ public class Movie implements Serializable {
 
     public void setNumOfLikes(int numOfLikes) {
         this.numOfLikes = numOfLikes;
-    }
-
-    public int getNumOfDislikes() {
-        return numOfDislikes;
-    }
-
-    public void setNumOfDislikes(int numOfDislikes) {
-        this.numOfDislikes = numOfDislikes;
     }
 }

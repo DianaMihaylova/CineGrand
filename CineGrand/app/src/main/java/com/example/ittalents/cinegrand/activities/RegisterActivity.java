@@ -54,7 +54,8 @@ public class RegisterActivity extends Activity {
                         boolean result = myDb.addUser(u);
                         if (result) {
                             Toast.makeText(RegisterActivity.this, "Registration successful! Welcome " + u.getEmail(), Toast.LENGTH_LONG).show();
-                            Intent i = new Intent(getBaseContext(), MovieDetailsActivity.class);
+                            Intent i = new Intent(getBaseContext(), CinemasActivity.class);
+                            i.putExtra("user", u);
                             startActivity(i);
                             finish();
                         } else {

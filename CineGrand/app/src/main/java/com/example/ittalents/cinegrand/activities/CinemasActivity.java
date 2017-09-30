@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.ittalents.cinegrand.R;
+import com.example.ittalents.cinegrand.models.User;
 
 public class CinemasActivity extends Activity {
 
@@ -28,7 +29,10 @@ public class CinemasActivity extends Activity {
         parkCenterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(getBaseContext(), ListViewMoviesActivity.class);
+                User user = (User) getIntent().getSerializableExtra("user");
+                i.putExtra("user", user);
+                startActivity(i);
             }
         });
 

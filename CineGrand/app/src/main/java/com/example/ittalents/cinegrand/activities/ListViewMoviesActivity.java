@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.example.ittalents.cinegrand.R;
 import com.example.ittalents.cinegrand.models.Movie;
+import com.example.ittalents.cinegrand.models.User;
 
 import java.util.ArrayList;
 

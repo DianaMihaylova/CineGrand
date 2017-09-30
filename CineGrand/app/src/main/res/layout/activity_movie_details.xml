@@ -26,6 +26,11 @@
         android:layout_height="200dp"
         app:srcCompat="@drawable/it" />
 
+    <ImageButton
+        android:id="@+id/img_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"

@@ -1,15 +1,21 @@
 package com.example.ittalents.cinegrand.activities;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.ittalents.cinegrand.R;
+import com.example.ittalents.cinegrand.data.DatabaseManager;
 import com.example.ittalents.cinegrand.models.Movie;
+import com.example.ittalents.cinegrand.models.User;
 
 import java.util.ArrayList;
 
@@ -25,6 +31,8 @@ public class MovieDetailsActivity extends Activity {
     private TextView info, trailer;
     private Button reservationBtn;
     private Movie movieToProgram;
+    private ImageButton imgBtn;
+    private DatabaseManager myDb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +43,9 @@ public class MovieDetailsActivity extends Activity {
         info = (TextView) findViewById(R.id.textView2);
         trailer = (TextView) findViewById(R.id.textView);
         reservationBtn = (Button) findViewById(R.id.button_reservation);
+        imgBtn = (ImageButton) findViewById(R.id.img_btn);
+        myDb = DatabaseManager.getDBManager(this);
+        myDb.createDatabase();
 
         imageView.setImageResource(getIntent().getIntExtra("img_id", 00));
         String intentString = getIntent().getStringExtra("name");
@@ -53,6 +64,23 @@ public class MovieDetailsActivity extends Activity {
                 Intent i = new Intent(getBaseContext(), ReservationActivity.class);
                 i.putExtra("movie", movieToProgram);
                 startActivity(i);
+            }
+        });
+
+        imgBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                User u = (User) getIntent().getSerializableExtra("user");
+                boolean result = myDb.addLike(u.getEmail(), movieToProgram);
+                if (result) {
+                    Toast.makeText(MovieDetailsActivity.this, "You like this movie :)", Toast.LENGTH_LONG).show();
+                    movieToProgram.setNumOfLikes(movieToProgram.getNumOfLikes() + 1);
+
+                } else {
+                    Toast.makeText(getBaseContext(), "You unlike this movie :(", Toast.LENGTH_LONG).show();
+                    movieToProgram.setNumOfLikes(movieToProgram.getNumOfLikes() - 1);
+                }
+                myDb.close();
             }
         });
     }
@@ -79,7 +107,7 @@ public class MovieDetailsActivity extends Activity {
                 "14.10.2017 - 10:20 12:05 14:35 16:50 18:20 21:30");
         movies.add(m1);
 
-        Movie m2 = new Movie("XII “А“", "Genre:Comedy | Drama\n" +
+        Movie m2 = new Movie("XII А", "Genre:Comedy | Drama\n" +
                 "Length (in min.): 91\n" +
                 "Language:Bulgarian\n" +
                 "Released on: 15/09/2017\n" +
