@@ -39,7 +39,7 @@ public class CinemasActivity extends Activity {
         parkCenterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), ContactsActivity.class);
+                Intent intent = new Intent(getBaseContext(), ListViewMoviesActivity.class);
                 intent.putExtra("Kino", cinemas.get(0));
                 startActivity(intent);
             }
@@ -48,7 +48,7 @@ public class CinemasActivity extends Activity {
         ringMallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), ContactsActivity.class);
+                Intent intent = new Intent(getBaseContext(), ListViewMoviesActivity.class);
                 intent.putExtra("Kino", cinemas.get(1));
                 startActivity(intent);
             }

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.ittalents.cinegrand.R;
+import com.example.ittalents.cinegrand.models.Cinema;
 import com.example.ittalents.cinegrand.models.Movie;
 import com.example.ittalents.cinegrand.models.User;
 
@@ -37,6 +38,10 @@ public class ListViewMoviesActivity extends Activity {
         otherCinemaBtn = (Button) findViewById(R.id.button_choose_cinema);
         movies  = new ArrayList<>();
 
+        final Cinema kino = (Cinema) getIntent().getExtras().get("Kino");
+
+        otherCinemaBtn.setText(kino.getName());
+
         int i = 0;
         for (String name: movieName) {
             Movie m = new Movie(imgRes[i], name, infoMovies[i]);
@@ -54,6 +59,7 @@ public class ListViewMoviesActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getBaseContext(), ContactsActivity.class);
+                i.putExtra("Kino", kino);
                 startActivity(i);
             }
         });
