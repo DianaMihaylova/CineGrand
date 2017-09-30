@@ -47,8 +47,8 @@ public class SignInActivity extends Activity {
                 User u = new User(userNameValue, passValue);
                 if (u != null && myDb.checkEmailPass(userNameValue, passValue)) {
                     Toast.makeText(getBaseContext(), "Sign in success! Welcome " + u.getEmail(), Toast.LENGTH_SHORT).show();
-//                    Intent i = new Intent(getBaseContext(), ListViewMoviesActivity.class);
-                    Intent i = new Intent(getBaseContext(), CinemasActivity.class); // tuk smenih putya pri logvane da otiva na cinema activitito, a ne kum lista s kinata
+                    Intent i = new Intent(getBaseContext(), ListViewMoviesActivity.class);
+//                    Intent i = new Intent(getBaseContext(), CinemasActivity.class); // tuk smenih putya pri logvane da otiva na cinema activitito, a ne kum lista s kinata
                     startActivity(i);
                     finish();
                 } else {

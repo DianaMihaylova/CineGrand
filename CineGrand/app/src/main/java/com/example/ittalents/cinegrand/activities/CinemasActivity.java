@@ -28,16 +28,14 @@ public class CinemasActivity extends Activity {
         parkCenterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), ParkCenterActivity.class);
-                startActivity(i);
+
             }
         });
 
         ringMallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), RingMallActivity.class);
-                startActivity(i);
+
             }
         });
     }

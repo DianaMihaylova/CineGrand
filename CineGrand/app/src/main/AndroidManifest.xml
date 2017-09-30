@@ -23,8 +23,6 @@
         <activity android:name=".activities.ReservationActivity" />
         <activity android:name=".activities.ContactsActivity" />
         <activity android:name=".activities.CinemasActivity" />
-        <activity android:name=".activities.RingMallActivity" />
-        <activity android:name=".activities.ParkCenterActivity"></activity>
     </application>
 
 </manifest>
