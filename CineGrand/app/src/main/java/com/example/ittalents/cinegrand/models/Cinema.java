@@ -5,22 +5,22 @@ import java.io.Serializable;
 public class Cinema implements Serializable {
 
     private String name;
+    private String contactNumber;
     private String address;
-    private String tel;
-    private String map;
+    private int imgRes;
 
-    public Cinema(String name, String address, String tel, String map) {
+    public Cinema(String name, String address, String contactNumber, int imgRes) {
         if (name != null && !name.isEmpty()) {
             this.name = name;
         }
         if (address != null && !address.isEmpty()) {
             this.address = address;
         }
-        if (tel != null && !tel.isEmpty()) {
-            this.tel = tel;
+        if (contactNumber != null && !contactNumber.isEmpty()) {
+            this.contactNumber = contactNumber;
         }
-        if (map != null && !map.isEmpty()) {
-            this.map = map;
+        if(imgRes > 0) {
+            this.imgRes = imgRes;
         }
     }
 
@@ -32,11 +32,11 @@ public class Cinema implements Serializable {
         return address;
     }
 
-    public String getTel() {
-        return tel;
+    public String getContactNumber() {
+        return contactNumber;
     }
 
-    public String getMap() {
-        return map;
+    public int getImgRes() {
+        return imgRes;
     }
 }

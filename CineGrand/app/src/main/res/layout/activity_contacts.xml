@@ -7,4 +7,66 @@
     android:orientation="vertical"
     tools:context="com.example.ittalents.cinegrand.activities.ContactsActivity">
 
+    <Button
+        android:id="@+id/button_movies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:fontFamily="cursive"
+        android:text="@string/movies"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/cinema_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="Cinema name"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/address_textview"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Address: "
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="cursive"/>
+
+    <TextView
+        android:id="@+id/phone_textview"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact number: "
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="cursive"/>
+
+    <TextView
+        android:id="@+id/map_text"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How to reach us: "
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="cursive"/>
+
+    <ImageView
+        android:id="@+id/map_image"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/park_center_map" />
+
 </LinearLayout>
