@@ -7,6 +7,66 @@
     android:orientation="vertical"
     tools:context="com.example.ittalents.cinegrand.activities.ReservationActivity">
 
+    <TextView
+        android:id="@+id/cinema_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="Movie Program:"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/program_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/it_program" />
+
+    <Button
+        android:id="@+id/button_make_reservation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:fontFamily="cursive"
+        android:text="Make reservation"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Or contact us: "
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:id="@+id/id_contact_us"
+        android:clickable="true"/>
+
+    <Button
+        android:id="@+id/dial_contact_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:fontFamily="cursive"
+        android:text="make call"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cine_grand_logo_small"
+        android:layout_gravity="center"
+        />
+
+
 
 
 

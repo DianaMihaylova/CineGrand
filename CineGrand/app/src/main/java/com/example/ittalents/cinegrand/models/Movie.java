@@ -11,6 +11,7 @@ public class Movie implements Serializable {
     private String program;
     private int imgRes;
     private int numOfLikes;
+    private int imgProgram;
 
     public Movie(int imgRes, String title, String infoMovie) {
         if (imgRes > 0) {
@@ -24,7 +25,7 @@ public class Movie implements Serializable {
         }
     }
 
-    public Movie(String title, String infoMovie, String description, String trailer, String program, int imgRes) {
+    public Movie(String title, String infoMovie, String description, String trailer, String program, int imgRes, int imgProgram) {
         if (title != null && !title.isEmpty()) {
             this.title = title;
         }
@@ -42,6 +43,9 @@ public class Movie implements Serializable {
         }
         if (imgRes > 0) {
             this.imgRes = imgRes;
+        }
+        if (imgProgram > 0) {
+            this.imgProgram = imgProgram;
         }
         this.numOfLikes = 0;
     }
@@ -76,5 +80,9 @@ public class Movie implements Serializable {
 
     public void setNumOfLikes(int numOfLikes) {
         this.numOfLikes = numOfLikes;
+    }
+
+    public int getImgProgram() {
+        return this.imgProgram;
     }
 }

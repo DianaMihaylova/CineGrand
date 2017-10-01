@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.ittalents.cinegrand.R;
 import com.example.ittalents.cinegrand.data.DatabaseManager;
+import com.example.ittalents.cinegrand.models.Cinema;
 import com.example.ittalents.cinegrand.models.Movie;
 import com.example.ittalents.cinegrand.models.User;
 
@@ -44,6 +45,7 @@ public class MovieDetailsActivity extends Activity {
         myDb.createDatabase();
 
         Movie movie = (Movie) getIntent().getSerializableExtra("movie");
+        final Cinema kino = (Cinema) getIntent().getSerializableExtra("Kino");
 
         for (Movie m: movies) {
             if (m.getTitle().equals(movie.getTitle())) {
@@ -59,6 +61,7 @@ public class MovieDetailsActivity extends Activity {
             public void onClick(View v) {
                 Intent i = new Intent(getBaseContext(), ReservationActivity.class);
                 i.putExtra("movie", movieToProgram);
+                i.putExtra("Kino", kino);
                 startActivity(i);
             }
         });

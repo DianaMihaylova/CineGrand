@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ittalents.cinegrand.R;
+import com.example.ittalents.cinegrand.models.Cinema;
 import com.example.ittalents.cinegrand.models.Movie;
 import com.example.ittalents.cinegrand.models.User;
 
@@ -68,10 +69,12 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
         public void onClick(View v) {
             int position = getAdapterPosition();
             Movie movie = this.movies.get(position);
+            Cinema kino = (Cinema) ((ListViewMoviesActivity) context).getIntent().getSerializableExtra("Kino");
             User u = (User) ((ListViewMoviesActivity) context).getIntent().getSerializableExtra("user");
             Intent i = new Intent(this.context, MovieDetailsActivity.class);
             i.putExtra("movie", movie);
             i.putExtra("user", u);
+            i.putExtra("Kino", kino);
             this.context.startActivity(i);
         }
     }

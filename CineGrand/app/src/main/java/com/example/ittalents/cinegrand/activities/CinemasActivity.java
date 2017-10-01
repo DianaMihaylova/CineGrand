@@ -60,11 +60,11 @@ public class CinemasActivity extends Activity {
 
     private static void addCinema() {
         final Cinema parkCenter = new Cinema("CineGrand Park Center Sofia", "2 Arsenalski blvd, 1421 Sofia",
-                "+359 875 300 985, +359 875 300 982", R.drawable.park_center_map);
+                "+359 875 300 993", R.drawable.park_center_map);
         cinemas.add(parkCenter);
 
         final Cinema ringMall = new Cinema("CineGrand Ring Mall Sofia", " „Okolovrasten pat“ 214, Sofia",
-                "+359 875 300 996, +359 875 200 993", R.drawable.ring_mall_map);
+                "+359 875 300 996", R.drawable.ring_mall_map);
         cinemas.add(ringMall);
     }
 }

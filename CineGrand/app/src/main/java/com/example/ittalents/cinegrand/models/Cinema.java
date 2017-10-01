@@ -39,4 +39,6 @@ public class Cinema implements Serializable {
     public int getImgRes() {
         return imgRes;
     }
+
+
 }

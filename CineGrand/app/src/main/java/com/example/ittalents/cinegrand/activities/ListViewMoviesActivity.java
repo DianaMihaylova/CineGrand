@@ -90,7 +90,7 @@ public class ListViewMoviesActivity extends Activity {
                         "11.10.2017 - 10:15 11:45 14:30 15:20 19:30 22:30\n" +
                         "12.10.2017 - 10:00 12:00 14:00 16:00 18:00 22:30\n" +
                         "13.10.2017 - 10:10 12:35 13:35 15:45 17:35 21:45\n" +
-                        "14.10.2017 - 10:20 12:05 14:35 16:50 18:20 21:30", R.drawable.it);
+                        "14.10.2017 - 10:20 12:05 14:35 16:50 18:20 21:30", R.drawable.it, R.drawable.it_program);
         movies.add(m1);
 
         Movie m2 = new Movie("XII А", "Comedy | Drama", "Genre:Comedy | Drama\n" +
@@ -111,7 +111,7 @@ public class ListViewMoviesActivity extends Activity {
                 "11.10.2017 - 10:15 11:45 14:30 15:20 19:30 22:30\n" +
                 "12.10.2017 - 10:30 12:45 14:20 16:50 18:50 22:35\n" +
                 "13.10.2017 - 11:10 12:35 14:35 15:45 17:35 21:45\n" +
-                "14.10.2017 - 10:20 12:15 14:35 16:50 18:30 22:30", R.drawable.xii_a);
+                "14.10.2017 - 10:20 12:15 14:35 16:50 18:30 22:30", R.drawable.xii_a, R.drawable.lucky_logan_program);
         movies.add(m2);
 
         Movie m3 = new Movie("Despicable Me 3", "Action | Comedy | Animation | Adventure",
@@ -130,7 +130,8 @@ public class ListViewMoviesActivity extends Activity {
                 "11.10.2017 - 10:00 11:45 14:35 15:20 19:35 22:30\n" +
                 "12.10.2017 - 10:30 12:45 14:20 16:50 18:50 22:35\n" +
                 "13.10.2017 - 11:15 12:35 14:30 15:45 17:30 21:45\n" +
-                "14.10.2017 - 10:00 12:10 14:30 16:45 18:35 22:00", R.drawable.despicable_me_3);
+                "14.10.2017 - 10:00 12:10 14:30 16:45 18:35 22:00",
+                R.drawable.despicable_me_3, R.drawable.despicable_me_3_program);
         movies.add(m3);
 
         Movie m4 = new Movie("Hitmans Bodyguard", "Action | Comedy", "Genre:Action | Comedy\n" +
@@ -151,7 +152,8 @@ public class ListViewMoviesActivity extends Activity {
                         "11.10.2017 - 10:00 11:45 14:35 15:20 19:30 22:30\n" +
                         "12.10.2017 - 10:35 12:45 14:30 16:50 18:55 22:35\n" +
                         "13.10.2017 - 11:15 12:30 14:35 15:45 17:35 21:45\n" +
-                        "14.10.2017 - 10:20 12:30 14:45 16:30 18:20 22:20", R.drawable.hitmans_bodyguard);
+                        "14.10.2017 - 10:20 12:30 14:45 16:30 18:20 22:20",
+                R.drawable.hitmans_bodyguard, R.drawable.hitmans_bodyguard_program);
         movies.add(m4);
 
         Movie m5 = new Movie("The Nut Job 2", "Comedy | Animation | Adventure", "Genre:Comedy | Animation | Adventure\n" +
@@ -173,7 +175,8 @@ public class ListViewMoviesActivity extends Activity {
                 "11.10.2017 - 10:00 11:45 14:35 15:20 19:30 22:30\n" +
                 "12.10.2017 - 10:35 12:45 14:30 16:50 18:55 22:35\n" +
                 "13.10.2017 - 11:15 12:30 14:35 15:45 17:35 21:45\n" +
-                "14.10.2017 - 10:25 12:20 14:50 16:30 18:45 22:20", R.drawable.the_nut_job_2_nutty_by_nature);
+                "14.10.2017 - 10:25 12:20 14:50 16:30 18:45 22:20",
+                R.drawable.the_nut_job_2_nutty_by_nature, R.drawable.the_nut_job_program);
         movies.add(m5);
 
         Movie m6 = new Movie("Logan Lucky", "Comedy | Drama | Crime", "Genre:Comedy | Drama | Crime\n" +
@@ -192,7 +195,8 @@ public class ListViewMoviesActivity extends Activity {
                 "11.10.2017 - 10:00 11:45 14:35 15:55 19:30 22:30\n" +
                 "12.10.2017 - 10:35 12:20 14:20 16:50 18:55 22:35\n" +
                 "13.10.2017 - 11:15 12:30 14:35 15:45 17:35 21:45\n" +
-                "14.10.2017 - 10:30 12:20 14:50 16:30 18:45 22:05", R.drawable.logan_lucky);
+                "14.10.2017 - 10:30 12:20 14:50 16:30 18:45 22:05",
+                R.drawable.logan_lucky, R.drawable.lucky_logan_program);
         movies.add(m6);
     }
 }
