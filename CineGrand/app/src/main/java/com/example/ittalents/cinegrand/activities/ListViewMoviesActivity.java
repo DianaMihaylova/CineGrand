@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.ittalents.cinegrand.R;
 import com.example.ittalents.cinegrand.models.Cinema;
@@ -27,7 +28,8 @@ public class ListViewMoviesActivity extends Activity {
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager manager;
     private String movieName, infoMovies;
-    private Button otherCinemaBtn, contactsBtn;
+    private Button contactsBtn;
+    private TextView cinemaName;
     private ArrayList<Movie> listMovies;
 
     @Override
@@ -37,12 +39,12 @@ public class ListViewMoviesActivity extends Activity {
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         contactsBtn = (Button) findViewById(R.id.button_contacts);
-        otherCinemaBtn = (Button) findViewById(R.id.button_choose_cinema);
+        cinemaName = (TextView)findViewById(R.id.cinema_name);
         listMovies = new ArrayList<>();
 
         final Cinema kino = (Cinema) getIntent().getExtras().get("Kino");
 
-        otherCinemaBtn.setText(kino.getName());
+        cinemaName.setText(kino.getName());
 
 
         for (Movie movie: movies) {
@@ -63,14 +65,6 @@ public class ListViewMoviesActivity extends Activity {
             public void onClick(View v) {
                 Intent i = new Intent(getBaseContext(), ContactsActivity.class);
                 i.putExtra("Kino", kino);
-                startActivity(i);
-            }
-        });
-
-        otherCinemaBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getBaseContext(), CinemasActivity.class);
                 startActivity(i);
             }
         });

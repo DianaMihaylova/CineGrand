@@ -13,7 +13,8 @@ import com.example.ittalents.cinegrand.models.Cinema;
 
 public class ContactsActivity extends Activity {
 
-    private Button movies;
+//    private Button movies;
+    private Button chooseCinema;
     private TextView address, contactNumbers, cinemaName;
     private ImageView mapImage;
 
@@ -22,7 +23,7 @@ public class ContactsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
 
-        movies = (Button) findViewById(R.id.button_movies);
+        chooseCinema = (Button) findViewById(R.id.choose_cinema);
         address = (TextView) findViewById(R.id.address_textview);
         contactNumbers = (TextView) findViewById(R.id.phone_textview);
         cinemaName = (TextView) findViewById(R.id.cinema_name);
@@ -35,11 +36,11 @@ public class ContactsActivity extends Activity {
         contactNumbers.setText("Contact number: " + kino.getContactNumber());
         mapImage.setImageResource(kino.getImgRes());
 
-        movies.setOnClickListener(new View.OnClickListener() {
+        chooseCinema.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), ListViewMoviesActivity.class);
-                intent.putExtra("Kino", kino);
+                Intent intent = new Intent(getBaseContext(), CinemasActivity.class);
+//                intent.putExtra("Kino", kino);
                 startActivity(intent);
             }
         });
