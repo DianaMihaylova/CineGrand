@@ -92,6 +92,7 @@ public class ListViewMoviesActivity extends Activity {
                         "13.10.2017 - 10:10 12:35 13:35 15:45 17:35 21:45\n" +
                         "14.10.2017 - 10:20 12:05 14:35 16:50 18:20 21:30",
                 R.drawable.it, R.drawable.it_program,
+//                "http://cinegrand.bg/mobi/Home/CinemaMovies?CinemaID=6jqmS1Mz7jI=&ScreenIDs=LAI2OqZe9Oc=&CinemaName=PCS%20SOFIA");
                 "http://cinegrand.bg/Home/moviebooknow_new?fid=n5%2004iswEsI%3D");
         movies.add(m1);
 
