@@ -20,7 +20,7 @@ public class ReservationActivity extends Activity {
     private Button makeReservation, makeCall;
     private TextView contactUs;
     private ImageView imgProgram;
-    private String phoneNumber;
+    private String phoneNumber, reservationLink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +36,19 @@ public class ReservationActivity extends Activity {
         imgProgram = (ImageView) findViewById(R.id.program_image);
 
         phoneNumber = kino.getContactNumber();
+        reservationLink = film.getReservationLink();
 
 
         imgProgram.setImageResource(film.getImgProgram());
         contactUs.setText("Or contact us: \n" + kino.getContactNumber());
+
+        makeReservation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openURL = new Intent(Intent.ACTION_VIEW, Uri.parse(reservationLink));
+                startActivity(openURL);
+            }
+        });
 
         makeCall.setOnClickListener(new View.OnClickListener() {
             @Override
