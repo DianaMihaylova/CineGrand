@@ -116,29 +116,18 @@ public class DatabaseManager extends SQLiteOpenHelper {
         return false;
     }
 
-    public boolean addLike(String email, Movie movie) {
-        if (movie != null && email != null && !email.isEmpty()) {
+    public boolean addLike(String email, String title) {
+        if (title != null && email != null && !email.isEmpty()) {
             SQLiteDatabase db = this.getWritableDatabase();
             String myRawQuery = "select * from " + TABLE_LIKES + " where " + LIKE_EMAIL +
-                    " = \"" + email + "\";";
+                    "=" + email + " and " + LIKE_MOVIE_TITLE + "=" + title;
             if (db.rawQuery(myRawQuery, null).getCount() != 0) {
-                if (checkMovie(email, movie)) {
-                    return false;
-                } else {
-                    ContentValues contentValues = new ContentValues();
-                    contentValues.putNull(LIKE_ID);
-                    contentValues.put(LIKE_EMAIL, email);
-                    contentValues.put(LIKE_MOVIE_TITLE, movie.getTitle());
-                    long result = db.insert(TABLE_LIKES, null, contentValues);
-                    if (result == -1) {
-                        return false;
-                    }
-                }
+                return false;
             }
             ContentValues contentValues = new ContentValues();
             contentValues.putNull(LIKE_ID);
             contentValues.put(LIKE_EMAIL, email);
-            contentValues.put(LIKE_MOVIE_TITLE, movie.getTitle());
+            contentValues.put(LIKE_MOVIE_TITLE, title);
             long result = db.insert(TABLE_LIKES, null, contentValues);
             if (result == -1) {
                 return false;
@@ -149,25 +138,10 @@ public class DatabaseManager extends SQLiteOpenHelper {
         return true;
     }
 
-    public boolean checkMovie(String email, Movie movie) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        String myRawQuery = "select " + LIKE_MOVIE_TITLE  + " from " + TABLE_LIKES + " where " + LIKE_EMAIL + " = \"" + email + "\";";
-        Cursor c = db.rawQuery(myRawQuery, null);
-        if(c.getCount() == 0) {
-            return false;
-        }
-        c.moveToNext();
-        String m = c.getString(0);
-        if(movie.getTitle().equals(m)) {
-            return true;
-        }
-        return false;
-    }
-
-    public void deleteLike(String email, Movie movie) {
-        if (movie != null && email != null && !email.isEmpty()) {
+    public void deleteLike(String email, String title) {
+        if (title != null && email != null && !email.isEmpty()) {
             SQLiteDatabase db = this.getWritableDatabase();
-            db.delete(TABLE_LIKES, LIKE_EMAIL + "=" + email + " and " + LIKE_MOVIE_TITLE + "=" + movie.getTitle(), null);
+            db.delete(TABLE_LIKES, LIKE_EMAIL + "=" + email + " and " + LIKE_MOVIE_TITLE + "=" + title, null);
         }
     }
 }

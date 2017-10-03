@@ -70,12 +70,12 @@ public class MovieDetailsActivity extends Activity {
             @Override
             public void onClick(View v) {
                 User u = (User) getIntent().getSerializableExtra("user");
-                boolean result = myDb.addLike(u.getEmail(), movieToProgram);
+                boolean result = myDb.addLike(u.getEmail(), movieToProgram.getTitle());
                 if (result) {
                     Toast.makeText(MovieDetailsActivity.this, "You like this movie :)", Toast.LENGTH_LONG).show();
                     movieToProgram.setNumOfLikes(movieToProgram.getNumOfLikes() + 1);
                 } else {
-                    myDb.deleteLike(u.getEmail(), movieToProgram);
+//                    myDb.deleteLike(u.getEmail(), movieToProgram.getTitle());
                     Toast.makeText(getBaseContext(), "You unlike this movie :(", Toast.LENGTH_LONG).show();
                     movieToProgram.setNumOfLikes(movieToProgram.getNumOfLikes() - 1);
                 }

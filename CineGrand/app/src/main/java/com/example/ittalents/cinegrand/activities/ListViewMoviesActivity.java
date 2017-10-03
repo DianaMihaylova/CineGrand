@@ -83,15 +83,7 @@ public class ListViewMoviesActivity extends Activity {
                 "In the Town of Derry, the local kids are disappearing one by one, leaving behind " +
                 "bloody remains. In a place known as 'The Barrens', a group of seven kids are united" +
                 " by their horrifying and strange encounters with an evil clown and their " +
-                "determination to kill It.", "https://youtu.be/s7S74IElVow",
-                "08.10.2017 - 10:30 12:30 14:30 16:30 18:30 21:30\n" +
-                        "09.10.2017 - 10:50 12:45 14:15 16:20 18:50 21:55\n" +
-                        "10.10.2017 - 10:00 11:20 13:30 15:50 17:30 20:45\n" +
-                        "11.10.2017 - 10:15 11:45 14:30 15:20 19:30 22:30\n" +
-                        "12.10.2017 - 10:00 12:00 14:00 16:00 18:00 22:30\n" +
-                        "13.10.2017 - 10:10 12:35 13:35 15:45 17:35 21:45\n" +
-                        "14.10.2017 - 10:20 12:05 14:35 16:50 18:20 21:30",
-                R.drawable.it, R.drawable.it_program,
+                "determination to kill It.", "https://youtu.be/s7S74IElVow", R.drawable.it, R.drawable.it_program,
 //                "http://cinegrand.bg/mobi/Home/CinemaMovies?CinemaID=6jqmS1Mz7jI=&ScreenIDs=LAI2OqZe9Oc=&CinemaName=PCS%20SOFIA");
                 "http://cinegrand.bg/Home/moviebooknow_new?fid=n5%2004iswEsI%3D");
         movies.add(m1);
@@ -108,14 +100,7 @@ public class ListViewMoviesActivity extends Activity {
                 "Country / Year: Bulgaria 2017\n" +
                 "The movie XIIa is the sequel of the super successful XIa. In XIIa the journey continues." +
                 " After two years break, Lina is back to school to teach a new class - a new class, new problems.",
-                "https://youtu.be/sB4zz9sajsw", "08.10.2017 - 11:30 15:30 14:30 16:35 18:50 21:30\n" +
-                "09.10.2017 - 10:50 12:50 14:30 16:20 18:50 21:55\n" +
-                "10.10.2017 - 10:30 11:20 13:30 15:55 17:30 20:55\n" +
-                "11.10.2017 - 10:15 11:45 14:30 15:20 19:30 22:30\n" +
-                "12.10.2017 - 10:30 12:45 14:20 16:50 18:50 22:35\n" +
-                "13.10.2017 - 11:10 12:35 14:35 15:45 17:35 21:45\n" +
-                "14.10.2017 - 10:20 12:15 14:35 16:50 18:30 22:30",
-                R.drawable.xii_a, R.drawable.lucky_logan_program,
+                "https://youtu.be/sB4zz9sajsw", R.drawable.xii_a, R.drawable.lucky_logan_program,
                 "http://cinegrand.bg/mobi/Home/MovieSessionsWithTime?CinemaID=6jqmS1Mz7jI=&FilmID=LbCcPjiNQNQ=&CinemaName=PCS%20SOFIA&ScreenIDs=LAI2OqZe9Oc=");
                 //"http://cinegrand.bg/Home/moviebooknow_new?fid=LbCcPjiNQNQ%3D");
         movies.add(m2);
@@ -130,14 +115,7 @@ public class ListViewMoviesActivity extends Activity {
                 "Kristen Wiig, Trey Parker, Steve Carell\n" +
                 "Country / Year: USA 2017\n" +
                 "Balthazar Bratt, a child star from the 1980s, hatches a scheme for world domination.\n",
-                "https://youtu.be/I5rf_YfG8yQ", "08.10.2017 - 10:20 11:30 13:30 15:35 17:50 22:30\n" +
-                "09.10.2017 - 11:50 12:50 14:30 16:00 18:50 21:55\n" +
-                "10.10.2017 - 10:30 11:20 13:30 15:55 17:30 20:55\n" +
-                "11.10.2017 - 10:00 11:45 14:35 15:20 19:35 22:30\n" +
-                "12.10.2017 - 10:30 12:45 14:20 16:50 18:50 22:35\n" +
-                "13.10.2017 - 11:15 12:35 14:30 15:45 17:30 21:45\n" +
-                "14.10.2017 - 10:00 12:10 14:30 16:45 18:35 22:00",
-                R.drawable.despicable_me_3, R.drawable.despicable_me_3_program,
+                "https://youtu.be/I5rf_YfG8yQ", R.drawable.despicable_me_3, R.drawable.despicable_me_3_program,
                 "https://www.google.bg/search?biw=1536&bih=758&tbm=isch&sa=1&q=you+are+late&oq=you+are+late&gs_l=psy-" +
                         "ab.3..0i19k1l4.18756.25325.0.26088.12.12.0.0.0.0.136.1318.2j10.12.0.dummy_maps_web_fallback..." +
                         "0...1.1.64.psy-ab..0.12.1314...0j0i67k1.0.2Nvg0boPP-E");
@@ -155,13 +133,6 @@ public class ListViewMoviesActivity extends Activity {
                 "The world's top bodyguard gets a new client, a hit man who must testify at the " +
                 "International Court of Justice. They must put their differences aside and work together" +
                 " to make it to the trial on time.\n", "https://youtu.be/97lZB5GiU_k",
-                "08.10.2017 - 10:10 11:35 13:50 15:20 17:30 22:00\n" +
-                        "09.10.2017 - 11:55 12:45 14:30 16:20 18:55 21:55\n" +
-                        "10.10.2017 - 10:30 11:30 13:35 15:55 17:35 20:55\n" +
-                        "11.10.2017 - 10:00 11:45 14:35 15:20 19:30 22:30\n" +
-                        "12.10.2017 - 10:35 12:45 14:30 16:50 18:55 22:35\n" +
-                        "13.10.2017 - 11:15 12:30 14:35 15:45 17:35 21:45\n" +
-                        "14.10.2017 - 10:20 12:30 14:45 16:30 18:20 22:20",
                 R.drawable.hitmans_bodyguard, R.drawable.hitmans_bodyguard_program,
                 "https://www.google.bg/search?biw=1536&bih=758&tbm=isch&sa=1&q=you+are+late&oq=you+are+late&gs_l=psy-" +
                         "ab.3..0i19k1l4.18756.25325.0.26088.12.12.0.0.0.0.136.1318.2j10.12.0.dummy_maps_web_fallback..." +
@@ -181,14 +152,7 @@ public class ListViewMoviesActivity extends Activity {
                 "turn will bulldoze their home, which is the city park, and it's up to them and the rest of" +
                 " the park animals to stop the mayor, along with his daughter and a mad animal control " +
                 "officer from getting away with his scheme, and take back the park",
-                "https://youtu.be/UY7ETehkUR0", "08.10.2017 - 10:20 11:35 13:55 15:20 17:30 22:05\n" +
-                "09.10.2017 - 11:00 12:50 14:35 16:20 18:20 21:30\n" +
-                "10.10.2017 - 10:30 11:20 13:45 15:00 17:20 20:55\n" +
-                "11.10.2017 - 10:00 11:45 14:35 15:20 19:30 22:30\n" +
-                "12.10.2017 - 10:35 12:45 14:30 16:50 18:55 22:35\n" +
-                "13.10.2017 - 11:15 12:30 14:35 15:45 17:35 21:45\n" +
-                "14.10.2017 - 10:25 12:20 14:50 16:30 18:45 22:20",
-                R.drawable.the_nut_job_2_nutty_by_nature, R.drawable.the_nut_job_program,
+                "https://youtu.be/UY7ETehkUR0", R.drawable.the_nut_job_2_nutty_by_nature, R.drawable.the_nut_job_program,
                 "https://www.google.bg/search?biw=1536&bih=758&tbm=isch&sa=1&q=you+are+late&oq=you+are+late&gs_l=psy-" +
                         "ab.3..0i19k1l4.18756.25325.0.26088.12.12.0.0.0.0.136.1318.2j10.12.0.dummy_maps_web_fallback..." +
                         "0...1.1.64.psy-ab..0.12.1314...0j0i67k1.0.2Nvg0boPP-E");
@@ -204,14 +168,7 @@ public class ListViewMoviesActivity extends Activity {
                 "Adam Driver, Channing Tatum, Daniel Craig\n" +
                 "Country / Year: USA 2017\n" +
                 "Two brothers attempt to pull off a heist during a NASCAR race in North Carolina.",
-                "https://youtu.be/XHLw0wfpcT0", "08.10.2017 - 10:00 11:35 13:20 15:20 17:30 22:20\n" +
-                "09.10.2017 - 11:30 12:50 14:30 16:35 18:20 21:30\n" +
-                "10.10.2017 - 10:45 11:20 13:45 15:00 17:20 20:55\n" +
-                "11.10.2017 - 10:00 11:45 14:35 15:55 19:30 22:30\n" +
-                "12.10.2017 - 10:35 12:20 14:20 16:50 18:55 22:35\n" +
-                "13.10.2017 - 11:15 12:30 14:35 15:45 17:35 21:45\n" +
-                "14.10.2017 - 10:30 12:20 14:50 16:30 18:45 22:05",
-                R.drawable.logan_lucky, R.drawable.lucky_logan_program,
+                "https://youtu.be/XHLw0wfpcT0", R.drawable.logan_lucky, R.drawable.lucky_logan_program,
                 "https://www.google.bg/search?biw=1536&bih=758&tbm=isch&sa=1&q=you+are+late&oq=you+are+late&gs_l=psy-" +
                         "ab.3..0i19k1l4.18756.25325.0.26088.12.12.0.0.0.0.136.1318.2j10.12.0.dummy_maps_web_fallback..." +
                         "0...1.1.64.psy-ab..0.12.1314...0j0i67k1.0.2Nvg0boPP-E");
