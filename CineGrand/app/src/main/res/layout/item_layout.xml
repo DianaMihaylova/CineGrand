@@ -36,7 +36,7 @@
         android:gravity="center"
         android:fontFamily="cursive"
         android:text="Genre Info"
-        android:textColor="@android:color/holo_orange_light" />" />
+        android:textColor="@android:color/holo_red_dark" />" />
     
     <View
         android:layout_width="match_parent"

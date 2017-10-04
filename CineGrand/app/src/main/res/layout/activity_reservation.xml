@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Or contact us: "
-        android:textColor="@android:color/holo_orange_light"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="28sp"
         android:textStyle="bold"
         android:fontFamily="cursive"

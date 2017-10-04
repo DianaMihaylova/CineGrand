@@ -29,6 +29,7 @@
         android:id="@+id/park_center_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="Cine Grand Park Center"
         android:backgroundTint="@android:color/holo_orange_light"
         android:fontFamily="cursive"
@@ -40,13 +41,12 @@
         android:id="@+id/ring_mall_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cine Grand Ring Mall"
+        android:layout_marginTop="10dp"
         android:backgroundTint="@android:color/holo_orange_light"
         android:fontFamily="cursive"
+        android:text="Cine Grand Ring Mall"
         android:textSize="20dp"
-        android:textStyle="bold"
-        />
-
+        android:textStyle="bold" />
 
 
 </LinearLayout>
