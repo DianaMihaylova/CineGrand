@@ -21,13 +21,13 @@ public class DatabaseManager extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "CineGrand.db";
     private static int DATABASE_VERSION = 1;
-//    Table name
+    //    Table name
     private static final String TABLE_USERS = "Users_Table";
     private static final String TABLE_LIKES = "Likes_Table";
-//    Users Table
+    //    Users Table
     private static final String KEY_EMAIL = "Email";
     private static final String KEY_PASSWORD = "Password";
-//    LikesTable
+    //    LikesTable
     private static final String LIKE_ID = "ID";
     private static final String LIKE_EMAIL = "Email";
     private static final String LIKE_MOVIE_TITLE = "Title";
@@ -42,7 +42,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    public static synchronized DatabaseManager getDBManager(Context context){
+    public static synchronized DatabaseManager getDBManager(Context context) {
         if (instance == null) {
             instance = new DatabaseManager(context);
             instance.createDatabase();
@@ -50,7 +50,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
         return instance;
     }
 
-    public void createDatabase(){
+    public void createDatabase() {
         SQLiteDatabase db = this.getWritableDatabase();
     }
 
@@ -69,7 +69,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onOpen(SQLiteDatabase db){
+    public void onOpen(SQLiteDatabase db) {
         super.onOpen(db);
     }
 
@@ -94,23 +94,16 @@ public class DatabaseManager extends SQLiteOpenHelper {
         return true;
     }
 
-//    public Cursor getUser(String email) {
-//        SQLiteDatabase db = this.getReadableDatabase();
-//        String myRawQuery = "select * from " + TABLE_USERS + " where " + KEY_EMAIL +
-//                " = \"" + email + "\";";
-//        return db.rawQuery(myRawQuery, null);
-//    }
-
     public boolean checkEmailPass(String email, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
-        String myRawQuery = "select " + KEY_PASSWORD  + " from " + TABLE_USERS + " where " + KEY_EMAIL + " = \"" + email + "\";";
+        String myRawQuery = "select " + KEY_PASSWORD + " from " + TABLE_USERS + " where " + KEY_EMAIL + " = \"" + email + "\";";
         Cursor c = db.rawQuery(myRawQuery, null);
-        if(c.getCount() == 0) {
+        if (c.getCount() == 0) {
             return false;
         }
         c.moveToNext();
         String pass = c.getString(0);
-        if(password.equals(pass)) {
+        if (password.equals(pass)) {
             return true;
         }
         return false;
@@ -120,28 +113,39 @@ public class DatabaseManager extends SQLiteOpenHelper {
         if (title != null && email != null && !email.isEmpty()) {
             SQLiteDatabase db = this.getWritableDatabase();
             String myRawQuery = "select * from " + TABLE_LIKES + " where " + LIKE_EMAIL +
-                    "=" + email + " and " + LIKE_MOVIE_TITLE + "=" + title;
-            if (db.rawQuery(myRawQuery, null).getCount() != 0) {
-                return false;
+                    " IS '" + email + "' and " + LIKE_MOVIE_TITLE + " IS '" + title + "'";
+            Cursor c = db.rawQuery(myRawQuery, null);
+            boolean check = false;
+            while (c.moveToNext()) {
+                String email1 = c.getString(1);
+                String title1 = c.getString(2);
+                if (email1.equals(email) && title1.equals(title)) {
+                    check = true;
+                    break;
+                }
             }
-            ContentValues contentValues = new ContentValues();
-            contentValues.putNull(LIKE_ID);
-            contentValues.put(LIKE_EMAIL, email);
-            contentValues.put(LIKE_MOVIE_TITLE, title);
-            long result = db.insert(TABLE_LIKES, null, contentValues);
-            if (result == -1) {
+            if (check) {
                 return false;
+            } else {
+                ContentValues contentValues = new ContentValues();
+                contentValues.putNull(LIKE_ID);
+                contentValues.put(LIKE_EMAIL, email);
+                contentValues.put(LIKE_MOVIE_TITLE, title);
+                long result = db.insert(TABLE_LIKES, null, contentValues);
+                if (result != -1) {
+                    return true;
+                }
             }
         } else {
             return false;
         }
-        return true;
+        return  false;
     }
 
     public void deleteLike(String email, String title) {
         if (title != null && email != null && !email.isEmpty()) {
             SQLiteDatabase db = this.getWritableDatabase();
-            db.delete(TABLE_LIKES, LIKE_EMAIL + "=" + email + " and " + LIKE_MOVIE_TITLE + "=" + title, null);
+            db.delete(TABLE_LIKES, LIKE_EMAIL + " IS '" + email + "' and " + LIKE_MOVIE_TITLE + " IS '" + title + "'", null);
         }
     }
 }

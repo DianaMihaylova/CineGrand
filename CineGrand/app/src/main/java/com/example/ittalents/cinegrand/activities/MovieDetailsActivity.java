@@ -25,7 +25,7 @@ import static com.example.ittalents.cinegrand.activities.ListViewMoviesActivity.
 public class MovieDetailsActivity extends Activity {
 
     private ImageView imageView;
-    private TextView info, trailer;
+    private TextView info, trailer, numOfLikes;
     private Button programBtn;
     private Movie movieToProgram;
     private ImageButton likeBtn;
@@ -40,7 +40,8 @@ public class MovieDetailsActivity extends Activity {
         info = (TextView) findViewById(R.id.textView2);
         trailer = (TextView) findViewById(R.id.textView);
         programBtn = (Button) findViewById(R.id.button_program);
-        likeBtn = (ImageButton) findViewById(R.id.like_btn);
+        likeBtn = (ImageButton) findViewById(R.id.button_like);
+        numOfLikes = (TextView) findViewById(R.id.num_likes);
         myDb = DatabaseManager.getDBManager(this);
         myDb.createDatabase();
 
@@ -55,6 +56,8 @@ public class MovieDetailsActivity extends Activity {
                 movieToProgram = m;
             }
         }
+
+        numOfLikes.setText("This movie is liked from " + movieToProgram.getNumOfLikes() + " users :)");
 
         programBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,10 +77,12 @@ public class MovieDetailsActivity extends Activity {
                 if (result) {
                     Toast.makeText(MovieDetailsActivity.this, "You like this movie :)", Toast.LENGTH_LONG).show();
                     movieToProgram.setNumOfLikes(movieToProgram.getNumOfLikes() + 1);
+                    numOfLikes.setText("This movie is liked from " + movieToProgram.getNumOfLikes() + " users :)");
                 } else {
-//                    myDb.deleteLike(u.getEmail(), movieToProgram.getTitle());
+                    myDb.deleteLike(u.getEmail(), movieToProgram.getTitle());
                     Toast.makeText(getBaseContext(), "You unlike this movie :(", Toast.LENGTH_LONG).show();
                     movieToProgram.setNumOfLikes(movieToProgram.getNumOfLikes() - 1);
+                    numOfLikes.setText("This movie is liked from " + movieToProgram.getNumOfLikes() + " users :)");
                 }
                 myDb.close();
             }

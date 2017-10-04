@@ -32,18 +32,20 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/like_btn"
+            android:id="@+id/button_like"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/like_button" />
+            android:background="@color/colorPrimary"
+            app:srcCompat="@drawable/button_liked" />
 
         <TextView
+            android:id="@+id/num_likes"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:fontFamily="cursive"
             android:text="Num likes"
-            android:textColor="@android:color/holo_orange_light"
-            android:textSize="30sp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
     </LinearLayout>
