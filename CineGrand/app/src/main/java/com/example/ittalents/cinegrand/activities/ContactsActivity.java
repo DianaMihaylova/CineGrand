@@ -13,7 +13,6 @@ import com.example.ittalents.cinegrand.models.Cinema;
 
 public class ContactsActivity extends Activity {
 
-//    private Button movies;
     private Button chooseCinema;
     private TextView address, contactNumbers, cinemaName;
     private ImageView mapImage;
@@ -40,7 +39,6 @@ public class ContactsActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), CinemasActivity.class);
-//                intent.putExtra("Kino", kino);
                 startActivity(intent);
             }
         });

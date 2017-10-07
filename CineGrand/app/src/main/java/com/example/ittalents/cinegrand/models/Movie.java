@@ -9,7 +9,6 @@ public class Movie implements Serializable {
     private String description;
     private String trailer;
     private int imgRes;
-    private int numOfLikes;
     private int imgProgram;
     private String reservationLink;
 
@@ -48,7 +47,6 @@ public class Movie implements Serializable {
         if (reservationLink != null && !reservationLink.isEmpty()) {
             this.reservationLink = reservationLink;
         }
-        this.numOfLikes = 0;
     }
 
     public String getTitle() {
@@ -69,14 +67,6 @@ public class Movie implements Serializable {
 
     public String getInfoMovie() {
         return infoMovie;
-    }
-
-    public int getNumOfLikes() {
-        return numOfLikes;
-    }
-
-    public void setNumOfLikes(int numOfLikes) {
-        this.numOfLikes = numOfLikes;
     }
 
     public int getImgProgram() {

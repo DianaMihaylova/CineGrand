@@ -57,7 +57,7 @@ public class MovieDetailsActivity extends Activity {
             }
         }
 
-        numOfLikes.setText("This movie is liked from " + movieToProgram.getNumOfLikes() + " users :)");
+        numOfLikes.setText(myDb.getNumOfLikes(movieToProgram.getTitle()) + "");
 
         programBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,13 +76,11 @@ public class MovieDetailsActivity extends Activity {
                 boolean result = myDb.addLike(u.getEmail(), movieToProgram.getTitle());
                 if (result) {
                     Toast.makeText(MovieDetailsActivity.this, "You like this movie :)", Toast.LENGTH_LONG).show();
-                    movieToProgram.setNumOfLikes(movieToProgram.getNumOfLikes() + 1);
-                    numOfLikes.setText("This movie is liked from " + movieToProgram.getNumOfLikes() + " users :)");
+                    numOfLikes.setText(myDb.getNumOfLikes(movieToProgram.getTitle()) + "");
                 } else {
                     myDb.deleteLike(u.getEmail(), movieToProgram.getTitle());
                     Toast.makeText(getBaseContext(), "You unlike this movie :(", Toast.LENGTH_LONG).show();
-                    movieToProgram.setNumOfLikes(movieToProgram.getNumOfLikes() - 1);
-                    numOfLikes.setText("This movie is liked from " + movieToProgram.getNumOfLikes() + " users :)");
+                    numOfLikes.setText(myDb.getNumOfLikes(movieToProgram.getTitle()) + "");
                 }
                 myDb.close();
             }

@@ -148,4 +148,19 @@ public class DatabaseManager extends SQLiteOpenHelper {
             db.delete(TABLE_LIKES, LIKE_EMAIL + " IS '" + email + "' and " + LIKE_MOVIE_TITLE + " IS '" + title + "'", null);
         }
     }
+
+    public int getNumOfLikes(String title) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String myRawQuery = "select * from " + TABLE_LIKES + " where " + LIKE_MOVIE_TITLE +
+                " = \"" + title + "\";";
+        Cursor c = db.rawQuery(myRawQuery, null);
+        int count = 0;
+        while (c.moveToNext()) {
+            String title1 = c.getString(2);
+            if (title1.equals(title)) {
+                count++;
+            }
+        }
+        return count;
+    }
 }

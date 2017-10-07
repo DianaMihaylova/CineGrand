@@ -84,9 +84,7 @@ public class ListViewMoviesActivity extends Activity {
                 "bloody remains. In a place known as 'The Barrens', a group of seven kids are united" +
                 " by their horrifying and strange encounters with an evil clown and their " +
                 "determination to kill It.", "https://youtu.be/s7S74IElVow", R.drawable.it, R.drawable.it_program,
-//                "http://cinegrand.bg/mobi/Home/CinemaMovies?CinemaID=6jqmS1Mz7jI=&ScreenIDs=LAI2OqZe9Oc=&CinemaName=PCS%20SOFIA");
-//                "http://cinegrand.bg/Home/moviebooknow_new?fid=n5%2004iswEsI%3D");
-                "http://cinegrand.bg/mobi/Home/MovieSessionsWithTime?CinemaID=6jqmS1Mz7jI=&FilmID=n5%2004iswEsI=&CinemaName=PCS%20SOFIA&ScreenIDs=LAI2OqZe9Oc=");
+                "http://cinegrand.bg/Home/FilmSchedule?cid=6jqmS1Mz7jI=&sdate=2017-10-08&cityid=rzkCaSdxMPA=&tktype=LAI2OqZe9Oc=&scrid=LAI2OqZe9Oc=&schfor=LAI2OqZe9Oc=");
         movies.add(m1);
 
         Movie m2 = new Movie("XII А", "Comedy | Drama", "Genre:Comedy | Drama\n" +
@@ -102,9 +100,7 @@ public class ListViewMoviesActivity extends Activity {
                 "The movie XIIa is the sequel of the super successful XIa. In XIIa the journey continues." +
                 " After two years break, Lina is back to school to teach a new class - a new class, new problems.",
                 "https://youtu.be/sB4zz9sajsw", R.drawable.xii_a, R.drawable.lucky_logan_program,
-                "http://cinegrand.bg/mobi/Home/CinemaMovies?CinemaID=6jqmS1Mz7jI=&CinemaName=PCS%20SOFIA&ScreenIDs=LAI2OqZe9Oc=");
-//                "http://cinegrand.bg/mobi/Home/MovieSessionsWithTime?CinemaID=6jqmS1Mz7jI=&FilmID=LbCcPjiNQNQ=&CinemaName=PCS%20SOFIA&ScreenIDs=LAI2OqZe9Oc=");
-//                "http://cinegrand.bg/Home/moviebooknow_new?fid=LbCcPjiNQNQ%3D");
+                "http://cinegrand.bg/Home/FilmSchedule?cid=6jqmS1Mz7jI=&sdate=2017-10-08&cityid=rzkCaSdxMPA=&tktype=LAI2OqZe9Oc=&scrid=LAI2OqZe9Oc=&schfor=LAI2OqZe9Oc=");
         movies.add(m2);
 
         Movie m3 = new Movie("Despicable Me 3", "Action | Comedy | Animation | Adventure",
@@ -118,7 +114,7 @@ public class ListViewMoviesActivity extends Activity {
                 "Country / Year: USA 2017\n" +
                 "Balthazar Bratt, a child star from the 1980s, hatches a scheme for world domination.\n",
                 "https://youtu.be/I5rf_YfG8yQ", R.drawable.despicable_me_3, R.drawable.despicable_me_3_program,
-                "http://cinegrand.bg/mobi/Home/CinemaMovies?CinemaID=6jqmS1Mz7jI=&CinemaName=PCS%20SOFIA&ScreenIDs=LAI2OqZe9Oc=");
+                "http://cinegrand.bg/Home/FilmSchedule?cid=6jqmS1Mz7jI=&sdate=2017-10-08&cityid=rzkCaSdxMPA=&tktype=LAI2OqZe9Oc=&scrid=LAI2OqZe9Oc=&schfor=LAI2OqZe9Oc=");
         movies.add(m3);
 
         Movie m4 = new Movie("Hitmans Bodyguard", "Action | Comedy", "Genre:Action | Comedy\n" +
@@ -153,7 +149,7 @@ public class ListViewMoviesActivity extends Activity {
                 " the park animals to stop the mayor, along with his daughter and a mad animal control " +
                 "officer from getting away with his scheme, and take back the park",
                 "https://youtu.be/UY7ETehkUR0", R.drawable.the_nut_job_2_nutty_by_nature, R.drawable.the_nut_job_program,
-                "http://cinegrand.bg/mobi/Home/CinemaMovies?CinemaID=6jqmS1Mz7jI=&CinemaName=PCS%20SOFIA&ScreenIDs=LAI2OqZe9Oc=");
+                "http://cinegrand.bg/Home/FilmSchedule?cid=6jqmS1Mz7jI=&sdate=2017-10-08&cityid=rzkCaSdxMPA=&tktype=LAI2OqZe9Oc=&scrid=LAI2OqZe9Oc=&schfor=LAI2OqZe9Oc=");
         movies.add(m5);
 
         Movie m6 = new Movie("Logan Lucky", "Comedy | Drama | Crime", "Genre:Comedy | Drama | Crime\n" +
@@ -167,7 +163,7 @@ public class ListViewMoviesActivity extends Activity {
                 "Country / Year: USA 2017\n" +
                 "Two brothers attempt to pull off a heist during a NASCAR race in North Carolina.",
                 "https://youtu.be/XHLw0wfpcT0", R.drawable.logan_lucky, R.drawable.lucky_logan_program,
-                "http://cinegrand.bg/mobi/Home/CinemaMovies?CinemaID=6jqmS1Mz7jI=&CinemaName=PCS%20SOFIA&ScreenIDs=LAI2OqZe9Oc=");
+                "http://cinegrand.bg/Home/FilmSchedule?cid=6jqmS1Mz7jI=&sdate=2017-10-08&cityid=rzkCaSdxMPA=&tktype=LAI2OqZe9Oc=&scrid=LAI2OqZe9Oc=&schfor=LAI2OqZe9Oc=");
         movies.add(m6);
     }
 }

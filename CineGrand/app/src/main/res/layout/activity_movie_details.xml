@@ -35,15 +35,16 @@
             android:id="@+id/button_like"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            app:srcCompat="@drawable/button_liked" />
+            android:background="@drawable/button_liked"/>
 
         <TextView
             android:id="@+id/num_likes"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="cursive"
             android:text="Num likes"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
             android:textColor="@android:color/holo_red_dark"
             android:textSize="20sp"
             android:textStyle="bold" />
