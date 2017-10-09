@@ -2,6 +2,7 @@ package com.example.ittalents.cinegrand.activities;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,6 +34,15 @@ public class ContactsActivity extends Activity {
         cinemaName.setText(kino.getName());
         address.setText("Address: " + kino.getAddress());
         contactNumbers.setText("Contact number: " + kino.getContactNumber());
+
+        contactNumbers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent dialIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + kino.getContactNumber()));
+                startActivity(dialIntent);
+            }
+        });
+
         mapImage.setImageResource(kino.getImgRes());
 
         chooseCinema.setOnClickListener(new View.OnClickListener() {
